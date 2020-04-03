@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {ThemeProvider} from 'styled-components';
+
+import GlobalStyle from './theme/globalStyle';
+import Theme from './theme/theme'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ThemeProvider theme={Theme}> // CSS Variables 
+        <App />
+        <GlobalStyle /> // CSS Global styles
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
