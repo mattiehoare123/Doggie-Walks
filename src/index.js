@@ -10,9 +10,9 @@ import Theme from './theme/theme'
 
 ReactDOM.render(
   <React.StrictMode>
-      <ThemeProvider theme={Theme}> // CSS Variables 
+      <ThemeProvider theme={Theme}> {/*CSS Variables*/}
         <App />
-        <GlobalStyle /> // CSS Global styles
+        <GlobalStyle /> {/*CSS Global styles*/}
       </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
