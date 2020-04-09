@@ -1,8 +1,6 @@
 import React from 'react'
-import { Navigation } from './components/Navigation'
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
-import { Footer } from './components/Footer'
 import Dog from './assets/Home/dog-panting.jpg'
 import DogPaw from './assets/Home/dog-paw.jpg'
 import DogSitting from './assets/Home/dog-sitting.jpg'
