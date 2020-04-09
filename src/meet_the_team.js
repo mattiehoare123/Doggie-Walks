@@ -11,7 +11,7 @@ import Jonna from './assets/Team/joanna-davies.jpg'
 export const meet_the_team = () => {
   return (
     <Content>
-      <Hero title="Do You Need Your Dog Walking" image={DogFace}/>
+      <Hero title="Meet The Team" image={DogFace}/>
       <article>
         <h2>Meet The Doggie Walks Team!</h2>
         <p>

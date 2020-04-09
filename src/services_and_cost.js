@@ -1,5 +1,49 @@
 import React from 'react'
+import { Hero } from './components/Hero'
+import { Content } from './components/Content'
+import DogGroup from './assets/Services/dogs-group.jpg'
+import DogWalking from './assets/Services/dog-walking.svg'
+import HouseCalls from './assets/Services/house-calls.svg'
+import DayCare from './assets/Services/day-care.svg'
 
 export const services_and_cost = () => {
-  return <h1>Services and Cost</h1>
+  return (
+    <Content>
+      <Hero title="Services & Cost" image={DogGroup}/>
+      <p>
+        Your dog shall receive the full-length time it deserves. Check for your local branch and pop in if you’re unsure which service is right for you. Every dog is unique,
+        meaning that every dog deserves our full attention 7 days a week.
+      </p>
+      <section>
+        <img src={DogWalking} alt="Male with a blue hoody and jeans on walking his dog"/>
+        <h3>Dog Walking</h3>
+        <p>£12/H</p>
+        <p>Duration: 1 hour (enquire for more)</p>
+        <p>
+          Not all dogs enjoy group walks, therefore we provide two different services. Solo or group, discover which option
+           is best for your dog.
+         </p>
+      </section>
+      <section>
+        <img src={HouseCalls} alt="Female with blue shirt on in a living room stroking a dog"/>
+        <h3>House Calls</h3>
+        <p>£15/H</p>
+        <p>Duration: 1 hour (enquire for more)</p>
+        <p>
+          Need your dog looking after while you’re not home? This service allows you to have peace of mind while we ensure
+          that your dog has the attention and care it deserves
+        </p>
+      </section>
+      <section>
+        <img src={DayCare} alt="Female with a blue hoody and sunglasses on outside a dog care centre with a dog"/>
+        <h3>Day Care</h3>
+        <p>£60/DAY</p>
+        <p>Duration: 8 hours per day</p>
+        <p>
+          Our professional day care centers provide the most up to date and clean facilities which ensures that
+          your dog is safe, protected and healthy. This will cover all services from feeding, bathing walking and sleeping.
+        </p>
+      </section>
+    </Content>
+  )
 }
