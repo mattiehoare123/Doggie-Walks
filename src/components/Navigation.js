@@ -5,15 +5,21 @@ import logo from '../assets/logo.svg';
 
 
 const Header = styled.header`
-display: grid;
-grid-template-columns: 200px auto 250px;
-grid-gap: 20px;
-margin: 0 50px;
+display: flex;
+margin: 0 20px;
+justify-content: space-between;
+align-content: center;
+`
+
+const Logo = styled.img`
+width: 100px;
 height: 100px;
-align-content: center
 `
 
 const NavBar = styled.nav`
+@media only screen and (max-width: 800px) {
+  display: none
+}
 ul {
   display: flex;
   justify-content: space-around;
@@ -30,15 +36,17 @@ const Contact = styled.div`
 display: flex;
 flex-direction: column;
 text-align: center;
+justify-content: center;
 `
 
-const contactDeatils = styled.a`
+const ContactDetails = styled.a`
 text-decoration: none;
-font-size: 2.4rem;
+font-size: 1.5rem;
 
 &:first-child {
   color: ${(props) => props.theme.colors.orange};
   font-weight: ${(props) => props.theme.weights.semi};
+  margin-bottom: .5em;
 }
 
 &:last-child {
@@ -49,8 +57,8 @@ font-size: 2.4rem;
 export const Navigation = () => {
   return (
     <Header>
+      <Logo src={logo} alt="Dog paw with doggie walks underneath" />
       <NavBar>
-        <img src={logo} alt="Dog paw with doggie walks underneath" />
         <ul>
           <li><StyledLink to="/">Home</StyledLink></li>
           <li><StyledLink to="about_us">About</StyledLink></li>
@@ -60,8 +68,8 @@ export const Navigation = () => {
         </ul>
       </NavBar>
       <Contact>
-        <contactDeatils href="">01695 883 112</contactDeatils>
-        <contactDeatils href="info@doggiewalks.co.uk">info@doggiewalks.co.uk</contactDeatils>
+        <ContactDetails href="">01695 883 112</ContactDetails>
+        <ContactDetails href="info@doggiewalks.co.uk">info@doggiewalks.co.uk</ContactDetails>
       </Contact>
     </Header>
   )
