@@ -1,5 +1,5 @@
 import React from 'react';
-import dogHouse from '../assets/dogHouse.svg';
+import dogHouse from '../assets/Footer/dog-house.svg';
 
 export const Footer = () => {
   return (

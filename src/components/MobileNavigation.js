@@ -1,9 +1,9 @@
 import React from 'react';
-import home from '../assets/home.svg';
-import about from '../assets/about.svg';
-import services from '../assets/services.svg';
-import gallery from '../assets/gallery.svg';
-import contact from '../assets/contact.svg';
+import home from '../assets/MobileNavigation/home.svg';
+import about from '../assets/MobileNavigation/about.svg';
+import services from '../assets/MobileNavigation/services.svg';
+import gallery from '../assets/MobileNavigation/gallery.svg';
+import contact from '../assets/MobileNavigation/contact.svg';
 import contact from '../assets/logo.svg';
 
 export const MobileNavigation = () => {

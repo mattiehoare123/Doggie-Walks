@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Content = () => {
+export const Content = (props) => {
   return (
-    <div>
-
-    </div>
+    <main>
+      {props.children}
+    </main>
   )
 }
