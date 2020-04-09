@@ -7,16 +7,19 @@ import { services_and_cost } from './services_and_cost';
 import { gallery } from './gallery';
 import { contact } from './contact';
 
+
 function App() {
   return (
-      <BrowserRouter>
+      <React.Fragment>
+        <BrowserRouter>
           <Route path="/" exact component={home}/>
           <Route path="/about_us" exact component={about_us}/>
           <Route path="/meet_the_team" exact component={meet_the_team}/>
           <Route path="/services_and_cost" exact component={services_and_cost}/>
           <Route path="/gallery" exact component={gallery}/>
           <Route path="/contact" exact component={contact}/>
-      </BrowserRouter>
+        </BrowserRouter>
+      </React.Fragment>
   );
 }
 

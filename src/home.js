@@ -1,5 +1,10 @@
 import React from 'react'
+import { Navigation } from './components/Navigation'
 
 export const home = () => {
-  return <h1>Home</h1>
+  return (
+    <React.Fragment>
+    <Navigation/>
+    </React.Fragment>
+  )
 }
