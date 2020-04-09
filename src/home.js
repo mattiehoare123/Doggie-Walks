@@ -8,11 +8,6 @@ import DogHugging from './assets/Home/dog-hugging.jpg'
 import DogYawning from './assets/Home/dog-yawning.jpg'
 import styled from 'styled-components';
 
-const Header = styled.img`
-width: 100%;
-`
-
-
 export const home = () => {
   return (
     <Content>

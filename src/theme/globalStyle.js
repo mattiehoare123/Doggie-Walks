@@ -21,5 +21,22 @@ body {
 li {
   list-style-type: none;
 }
+
+h2, h3 {
+  color: ${(props) => props.theme.colors.orange};
+  font-weight: ${(props) => props.theme.weights.semi};
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+/*Highlight important text in paragraphs*/
+span {
+  color: ${(props) => props.theme.colors.blue};
+  font-weight: ${(props) => props.theme.weights.semi};
+}
 `
 export default GlobalStyle
