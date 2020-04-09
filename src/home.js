@@ -6,6 +6,12 @@ import DogPaw from './assets/Home/dog-paw.jpg'
 import DogSitting from './assets/Home/dog-sitting.jpg'
 import DogHugging from './assets/Home/dog-hugging.jpg'
 import DogYawning from './assets/Home/dog-yawning.jpg'
+import styled from 'styled-components';
+
+const Header = styled.img`
+width: 100%;
+`
+
 
 export const home = () => {
   return (
