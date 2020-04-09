@@ -6,7 +6,7 @@ import { meet_the_team } from './meet_the_team';
 import { services_and_cost } from './services_and_cost';
 import { gallery } from './gallery';
 import { contact } from './contact';
-
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path="/gallery" exact component={gallery}/>
           <Route path="/contact" exact component={contact}/>
         </BrowserRouter>
+        <Footer/>
       </React.Fragment>
   );
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import logo from '../assets/logo.svg';
+
 
 const Header = styled.header`
 display: grid;
@@ -30,7 +32,7 @@ flex-direction: column;
 text-align: center;
 `
 
-const Contact_Deatils = styled.a`
+const contactDeatils = styled.a`
 text-decoration: none;
 font-size: 2.4rem;
 
@@ -47,8 +49,8 @@ font-size: 2.4rem;
 export const Navigation = () => {
   return (
     <Header>
-      <h1>Logo</h1>
       <NavBar>
+        <img src={logo} alt="Dog paw with doggie walks underneath" />
         <ul>
           <li><StyledLink to="/">Home</StyledLink></li>
           <li><StyledLink to="about_us">About</StyledLink></li>
@@ -58,8 +60,8 @@ export const Navigation = () => {
         </ul>
       </NavBar>
       <Contact>
-        <Contact_Deatils href="">01695 883 112</Contact_Deatils>
-        <Contact_Deatils href="info@doggiewalks.co.uk">info@doggiewalks.co.uk</Contact_Deatils>
+        <contactDeatils href="">01695 883 112</contactDeatils>
+        <contactDeatils href="info@doggiewalks.co.uk">info@doggiewalks.co.uk</contactDeatils>
       </Contact>
     </Header>
   )
