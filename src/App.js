@@ -7,6 +7,7 @@ import { services_and_cost } from './services_and_cost';
 import { gallery } from './gallery';
 import { contact } from './contact';
 import { Navigation } from './components/Navigation';
+import { MobileNavigation } from './components/MobileNavigation';
 import { Content } from './components/Content';
 import { Footer } from './components/Footer';
 
@@ -21,8 +22,10 @@ function App(props) {
           <Route path="/gallery" exact component={gallery}/>
           <Route path="/contact" exact component={contact}/>
           <Navigation/>
+          <MobileNavigation/>
         </BrowserRouter>
         <Footer/>
+
       </React.Fragment>
   );
 }
