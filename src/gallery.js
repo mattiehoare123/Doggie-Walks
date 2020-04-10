@@ -12,11 +12,12 @@ import BlackBulldog from './assets/Gallery/black-french-bulldog.jpg'
 import BlackLabrador from './assets/Gallery/black-labrador-dog.jpg'
 import BrownLabrador from './assets/Gallery/brown-labrador-dog.jpg'
 
-const GalleryTitle = styled.h1`
+const GalleryHeading = styled.h1`
 text-align: center;
 text-transform: uppercase;
 color: ${(props) => props.theme.colors.orange};
 margin: ${(props) => props.theme.margin.bottom} 0;
+font-weight: ${(props) => props.theme.weights.bold};
 `
 const DogImage = styled.img`
 width: 100%;
@@ -26,7 +27,7 @@ height: 350px;
 export const gallery = () => {
   return (
     <Content className="ContentGrid">
-      <GalleryTitle>Gallery</GalleryTitle>
+      <GalleryHeading>Gallery</GalleryHeading>
       <DogImage src={BlondeHavanesse} alt="Blonde havanesse dog laying on grass"/>
       <DogImage src={DogWalkingMountain} alt="Female with blue hat on walking a dog in the mountains"/>
       <DogImage src={BlackShepherd} alt="Black and tan german shepherd dog lying on grass"/>
