@@ -5,31 +5,42 @@ import logo from '../assets/logo.svg';
 
 const Header = styled.header`
 display: flex;
-margin: 0 20px;
+max-width: 800px;
+padding: 0 4em 0 2em;
+margin: 0 auto;
 justify-content: space-between;
-align-content: center;
-`
+align-items: center;
 
+@media (${(props) => props.theme.responsive.laptop}) {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px;
+}
+`
 const Logo = styled.img`
 width: 100px;
 height: 85px;
 `
-
 const NavBar = styled.nav`
-@media only screen and (max-width: 800px) {
-  display: none
+@media (max-width: 550px) {
+  display: none;
 }
 ul {
   display: flex;
   justify-content: space-around;
 }
 li {
-  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3rem;
 }
+
 `
 const StyledLink =  styled(Link)`
 text-decoration: none;
-color: ${(props) => props.theme.colors.black}
+color: ${(props) => props.theme.colors.black};
+&:hover {
+  color: ${(props) => props.theme.colors.orange};
+}
 `
 const Contact = styled.div`
 display: flex;

@@ -14,5 +14,9 @@ export default {
 
   margin: {
     bottom: '1em'
+  },
+
+  responsive: {
+    laptop: '(min-width: 550px)'
   }
 }

@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
 padding: 0 2em;
-
+max-width: 800px;
+margin: 0 auto;
 `
 
 export const Content = (props) => {

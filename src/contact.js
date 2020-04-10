@@ -29,9 +29,10 @@ width: 100px;
 margin: .5em auto 0;
 border-radius: .2em;
 border: none;
-background: ${(props) => props.theme.colors.blue};
+background: ${(props) => props.theme.colors.orange};
 color: ${(props) => props.theme.colors.white};
 text-transform: uppercase;
+font-weight: ${(props) => props.theme.weights.semi};
 `
 const StoreLocations = styled.section`
 margin: 2em 0;
