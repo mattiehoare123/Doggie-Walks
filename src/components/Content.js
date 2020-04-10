@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.main`
+export const Container = styled.main`
 padding: 0 2em;
 
 `
