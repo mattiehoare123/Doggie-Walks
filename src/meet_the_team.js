@@ -6,7 +6,33 @@ import Lori from './assets/Team/lori-hanson.jpg'
 import Gary from './assets/Team/gary-simpson.jpg'
 import Rebecca from './assets/Team/rebecca-harrison.jpg'
 import Jonna from './assets/Team/joanna-davies.jpg'
+import styled from 'styled-components';
 
+const PhotoCardsGrid = styled.section`
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 1em;
+margin-bottom: ${(props) => props.theme.margin.bottom};
+`
+
+const PhotoCard = styled.figure`
+background-color: #F7F7F7;
+width: 150px;
+height: 200px;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 1em;
+`
+const Name = styled.p`
+font-weight: ${(props) => props.theme.weights.semi};
+margin: .8em 0 0;
+`
+
+const JobTitle = styled.p`
+  font-size: 1rem;
+  color: ${(props) => props.theme.colors.blue};
+`
 
 export const meet_the_team = () => {
   return (
@@ -24,28 +50,28 @@ export const meet_the_team = () => {
           well-respected canine trainers, behaviorists and practitioners.
         </p>
       </article>
-      <section>
-        <figure>
+      <PhotoCardsGrid>
+        <PhotoCard>
           <img src={Lori} alt="Close up of a short brown hair female smiling in red lipstick"/>
-          <p>Lori Hanson</p>
-          <p>Founder of Doggie Walks</p>
-        </figure>
-        <figure>
+          <Name>Lori Hanson</Name>
+          <JobTitle>Founder of Doggie Walks</JobTitle>
+        </PhotoCard>
+        <PhotoCard>
           <img src={Gary} alt="Close up of a ginger hair male with a short beard smirking"/>
-          <p>Gary Simpson</p>
-          <p>Team Manager</p>
-        </figure>
-        <figure>
+          <Name>Gary Simpson</Name>
+          <JobTitle>Team Manager</JobTitle>
+        </PhotoCard>
+        <PhotoCard>
           <img src={Rebecca} alt="Close up of a brown hair female with glasses with a tight lipped smile"/>
-          <p>Rebecca Harrison</p>
-          <p>Professional Dog Walker</p>
-        </figure>
-        <figure>
+          <Name>Rebecca Harrison</Name>
+          <JobTitle>Professional Dog Walker</JobTitle>
+        </PhotoCard>
+        <PhotoCard>
           <img src={Jonna} alt="Close up of a tanned blonde hair female smiling"/>
-          <p>Joanna Davies</p>
-          <p>Professional Dog Walker</p>
-        </figure>
-      </section>
+          <Name>Joanna Davies</Name>
+          <JobTitle>Professional Dog Walker</JobTitle>
+        </PhotoCard>
+      </PhotoCardsGrid>
     </Content>
   )
 }
