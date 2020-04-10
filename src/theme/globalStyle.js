@@ -41,7 +41,7 @@ h2 {
 h2, h3 {
   color: ${(props) => props.theme.colors.orange};
   font-weight: ${(props) => props.theme.weights.semi};
-}
+} 
 
 p {
   font-size: 1.5rem;
