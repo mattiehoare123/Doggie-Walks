@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
 background: #4A3B34;
-padding: 15px 2.3em;
+padding: 1em 2.3em 9em;
 display: grid;
 grid-template-columns: 130px auto;
 `

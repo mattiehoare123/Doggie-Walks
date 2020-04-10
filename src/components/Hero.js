@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledHero = styled.section`
 width: 100%;
-height: 15vh;
+height: 17vh;
 background-size: cover;
 background-repeat: no-repeat;
 background-size: 100% 100%;
@@ -19,8 +19,8 @@ poisiton: relative;
   background: ${(props) => props.theme.colors.black};
   opacity: 0.5;
   width: 100%;
-  height: 15vh;
-  top: 0;
+  height: 17vh;
+  top: 1;
   left: 0;
 }
 `

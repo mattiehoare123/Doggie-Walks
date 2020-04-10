@@ -15,13 +15,13 @@ function App(props) {
   return (
       <React.Fragment>
         <BrowserRouter>
+          <Navigation/>
           <Route path="/home" exact component={home}/>
           <Route path="/about_us" exact component={about_us}/>
           <Route path="/meet_the_team" exact component={meet_the_team}/>
           <Route path="/services_and_cost" exact component={services_and_cost}/>
           <Route path="/gallery" exact component={gallery}/>
           <Route path="/contact" exact component={contact}/>
-          <Navigation/>
           <MobileNavigation/>
         </BrowserRouter>
         <Footer/>

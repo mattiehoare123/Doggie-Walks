@@ -13,7 +13,7 @@ align-content: center;
 
 const Logo = styled.img`
 width: 100px;
-height: 100px;
+height: 85px;
 `
 
 const NavBar = styled.nav`

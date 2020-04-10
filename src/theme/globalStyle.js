@@ -21,16 +21,19 @@ body {
 li {
   list-style-type: none;
 }
-
+h2 {
+  margin-bottom: 1em;
+}
 h2, h3 {
   color: ${(props) => props.theme.colors.orange};
   font-weight: ${(props) => props.theme.weights.semi};
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 1em;
+  text-align: justify;
 }
 
 /*Highlight important text in paragraphs*/

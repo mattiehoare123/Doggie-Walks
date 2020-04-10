@@ -9,24 +9,17 @@ import contact from '../assets/MobileNavigation/contact.svg';
 import logo from '../assets/MobileNavigation/logo-background.svg';
 
 const StickyNav = styled.section`
-/*&::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url(${ logo }) no;
-  width: 50px;
-  height: 100px;
-  bottom: 50px;
-  */
+width: 100%;
+position: fixed;
+bottom: 0;
 }
 `
 const LogoImage = styled.img`
 position: relative;
-top: 22px;
+top: 25px;
 display: block;
 margin: 0 auto;
 `
-
 
 const MobileNav = styled.nav`
 padding: 20px 0 10px;
