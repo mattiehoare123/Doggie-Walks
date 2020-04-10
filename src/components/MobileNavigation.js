@@ -12,6 +12,9 @@ const StickyNav = styled.section`
 width: 100%;
 position: fixed;
 bottom: 0;
+@media (min-width: 650px){
+  display: none;
+  }
 }
 `
 const LogoImage = styled.img`

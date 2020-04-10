@@ -18,5 +18,14 @@ export default {
 
   responsive: {
     laptop: '(min-width: 550px)'
+  },
+
+  blueUnderline: {
+    content: '',
+    display: 'block',
+    height: '3px',
+    width: '60px',
+    margin: '1em auto',
+    background: 'blue'
   }
 }

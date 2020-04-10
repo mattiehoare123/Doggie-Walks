@@ -6,26 +6,37 @@ const StyledFooter = styled.footer`
 background: #4A3B34;
 padding: 1em 2.3em 9em;
 display: grid;
-grid-template-columns: 130px auto;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+@media(${(props) => props.theme.responsive.laptop}) {
+  padding-bottom: 2em;
+}
 `
 const DogHouse = styled.img`
 width: 100px;
 height: 100px;
+@media(${(props) => props.theme.responsive.laptop}) {
+  width: 150px;
+}
 `
 const OpeningTimes = styled.section`
 color: ${(props) => props.theme.colors.white};
-margin-top: 1em;
 `
 const OpeningTimesTitle = styled.h3`
 font-size: 2.3rem;
 font-weight: ${(props) => props.theme.weights.regular};
-margin-bottom: .5em;
 `
 const OpeningDayTimes = styled.ul`
 line-height: 1.3;
 font-size: 1.5rem;
+margin-top: .5em;
 `
 const CallUs = styled.p`
+@media(${(props) => props.theme.responsive.laptop}) {
+  grid-column: 3/4;
+  text-align: right;
+  font-size: 1.7rem;
+  margin-top: 0em;
+}
 grid-column: 1/-1;
 margin-top: .8em;
 font-size: 2.3rem;

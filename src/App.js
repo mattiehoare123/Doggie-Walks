@@ -25,7 +25,6 @@ function App(props) {
           <MobileNavigation/>
         </BrowserRouter>
         <Footer/>
-
       </React.Fragment>
   );
 }
