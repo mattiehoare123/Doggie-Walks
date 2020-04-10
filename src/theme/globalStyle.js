@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import Paw from '../assets/dog-paw.svg'
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
@@ -22,7 +23,20 @@ li {
   list-style-type: none;
 }
 h2 {
-  margin-bottom: 1em;
+  font-size: 2rem;
+  margin-bottom: ${(props) => props.theme.margin.bottom};
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    margin-right: .5em;
+    background: url('${ Paw }');
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+  }
 }
 h2, h3 {
   color: ${(props) => props.theme.colors.orange};

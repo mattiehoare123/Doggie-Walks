@@ -1,10 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
 import DogRunning from './assets/AboutUs/dog-running.jpg'
 import DogWoods from './assets/AboutUs/dog-woods.jpg'
 
-
+const DogInWoods = styled.img`
+width: 100%;
+margin-bottom: ${(props) => props.theme.margin.bottom}
+`
 export const about_us = () => {
   return (
     <Content>
@@ -17,11 +21,10 @@ export const about_us = () => {
         </p>
         <p>
           While dogs need daily exercise in order to stay healthy, for many people it's not always possible
-          to walk their pets regularly. Thats why we established Doggie Walks, to help people across <span>Lancashire</span>
-          and <span>Merseyside</span> ensure their dogs live happy lives.
+          to walk their pets regularly. Thats why we established Doggie Walks, to help people across <span>Lancashire</span> and <span>Merseyside</span> ensure their dogs live happy lives.
         </p>
       </article>
-      <img src={DogWoods} alt="Dog on a path in the woods"/>
+      <DogInWoods src={DogWoods} alt="Dog on a path in the woods"/>
       <article>
         <h2>How It Works</h2>
         <p>

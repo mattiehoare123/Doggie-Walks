@@ -11,6 +11,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 poisiton: relative;
+margin-bottom: 2.5em;
 
 &::after {
   content: '';

@@ -5,10 +5,14 @@ export default {
     black: '#000000',
     white: '#ffffff',
   },
-  
+
   weights: {
     regular: '400',
     semi: '600',
     bold: '700'
+  },
+
+  margin: {
+    bottom: '1em'
   }
 }

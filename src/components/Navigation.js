@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.svg';
 
-
 const Header = styled.header`
 display: flex;
 margin: 0 20px;
