@@ -3,13 +3,12 @@ import styled from 'styled-components'
 import { Content } from './components/Content'
 
 const ContactGrid = styled.article`
-@media(${(props) => props.theme.responsive.laptop}) {
+@media(${(props) => props.theme.responsive.ipad}) {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-gap: 40px;
 }
 `
-
 const ContactForm = styled.form`
 display: grid;
 `
@@ -23,6 +22,9 @@ font-weight: ${(props) => props.theme.weights.bold};
 const ContactLabel = styled.label`
 font-size: 1.2rem;
 margin-top: .5em;
+@media(${(props) => props.theme.responsive.laptop}) {
+  font-size: 1.7rem;
+}
 `
 const InputField = styled.input`
 background: #F2F2F2;
@@ -46,7 +48,7 @@ font-weight: ${(props) => props.theme.weights.semi};
 const StoreLocations = styled.section`
 margin: 2em 0;
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 grid-row-gap: 20px;
 `
 const Location = styled.ul`
@@ -54,8 +56,11 @@ line-height: 1.5;
 
 li {
   font-size: 1.3rem;
-  @media(${(props) => props.theme.responsive.laptop}) {
+  @media(${(props) => props.theme.responsive.ipad}) {
     font-size: 1.5rem;
+  }
+  @media(${(props) => props.theme.responsive.laptop}) {
+    font-size: 2rem;
   }
 }
 li:first-child {

@@ -5,15 +5,16 @@ import logo from '../assets/logo.svg';
 
 const Header = styled.header`
 display: flex;
-max-width: 800px;
-padding: 0 4em 0 2em;
+padding: 0 2em;
 margin: 0 auto;
 justify-content: space-between;
-align-items: center;
+align-content: center;
 
-@media (${(props) => props.theme.responsive.laptop}) {
+@media (${(props) => props.theme.responsive.ipad}) {
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: 100px 1fr 150px;
+  grid-template-columns: 100px 1fr 200px;
+  padding: 0 5em;
 }
 `
 const Logo = styled.img`
@@ -24,14 +25,24 @@ const NavBar = styled.nav`
 @media (max-width: 550px) {
   display: none;
 }
+display: flex;
+align-items: center;
+
 ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
 li {
   display: flex;
   justify-content: space-around;
-  font-size: 1.3rem;
+  font-size: 2rem;
+  @media (${(props) => props.theme.responsive.ipad}) {
+    font-size: 1.4rem;
+  }
+  @media (${(props) => props.theme.responsive.laptop}) {
+    font-size: 1.7rem;
+  }
 }
 
 `
@@ -52,6 +63,11 @@ justify-content: center;
 const ContactDetails = styled.a`
 text-decoration: none;
 font-size: 1.5rem;
+
+@media (${(props) => props.theme.responsive.ipad}) {
+  font-size: 1.7rem;
+}
+
 
 &:first-child {
   color: ${(props) => props.theme.colors.orange};

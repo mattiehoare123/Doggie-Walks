@@ -9,7 +9,7 @@ import Jonna from './assets/Team/joanna-davies.jpg'
 import styled from 'styled-components';
 
 const TeamGrid = styled.section`
-@media(${(props) => props.theme.responsive.laptop}) {
+@media(${(props) => props.theme.responsive.ipad}) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;

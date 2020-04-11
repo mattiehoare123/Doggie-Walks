@@ -3,15 +3,23 @@ import styled from 'styled-components';
 
 const StyledHero = styled.section`
 width: 100%;
-height: 17vh;
+height: 25vh;
 background-size: cover;
 background-repeat: no-repeat;
 background-size: 100% 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-poisiton: relative;
+position: relative;
 margin-bottom: 2.5em;
+
+@media(${(props) => props.theme.responsive.ipad}) {
+  height: 25vh;
+}
+
+@media(${(props) => props.theme.responsive.laptop}) {
+  height: 50vh;
+}
 
 &::after {
   content: '';
@@ -20,17 +28,23 @@ margin-bottom: 2.5em;
   background: ${(props) => props.theme.colors.black};
   opacity: 0.5;
   width: 100%;
-  height: 17vh;
-  top: 1;
+  height: 100%;
+  top: 0;
   left: 0;
 }
 `
 const HeroTitle = styled.h1`
-width: 190px;
-font-size: 2rem;
+font-size: 2.5rem;
+@media(${(props) => props.theme.responsive.ipad}) {
+  font-size: 3.5rem;
+}
+@media(${(props) => props.theme.responsive.laptop}) {
+  font-size: 4.5rem;
+}
 text-align: center;
+text-transform: uppercase;
 color: ${(props) => props.theme.colors.white};
-color: ${(props) => props.theme.weights.semi};
+color: ${(props) => props.theme.weights.bold};
 z-index: 1;
 `
 

@@ -9,7 +9,6 @@ import DogYawning from './assets/Home/dog-yawning.jpg'
 import styled from 'styled-components';
 
 const HomeHeadings = styled.h2`
-font-size: 2rem;
 text-align: center;
 &::after {
   content: '';
@@ -24,7 +23,7 @@ text-align: center;
 }
 `
 const TextRight = styled.p`
-@media(${(props) => props.theme.responsive.laptop}) {
+@media(${(props) => props.theme.responsive.ipad}) {
   display: grid;
   grid-template-columns: 250px 1fr;
   align-items: center;
@@ -37,14 +36,14 @@ margin: 0 auto;
 width: 245px;
 height: 237px;
 margin-bottom: 1em;
-@media(${(props) => props.theme.responsive.laptop}) {
+@media(${(props) => props.theme.responsive.ipad}) {
   height: 150px;
   width: 200px;
 }
 `
 const Services = styled.article`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 justify-content: center;
 
 figure {
@@ -58,7 +57,16 @@ const ServiceImage = styled.img`
 width: 96px;
 height: 89px;
 margin-bottom: .7em;
+
+@media(${(props) => props.theme.responsive.laptop}) {
+  height: 170px;
+  width: 200px;
+}
 `
+const ServiceTitle = styled.p`
+font-weight: ${(props) => props.theme.weights.bold};
+`
+
 const Pupply = styled.p`
 font-size: 1rem;
 `
@@ -97,16 +105,16 @@ export const home = () => {
         <HomeHeadings>We Also Offer Different Services Such As</HomeHeadings>
         <figure>
           <ServiceImage src={DogSitting} alt="Brown dog sitting on a couch"/>
-          <p style={{"margin": 0}}>Pet Sitting </p>
+          <ServiceTitle style={{"margin": 0}}>Pet Sitting </ServiceTitle>
           <Pupply>(Pupply and Elderly)</Pupply>
         </figure>
         <figure>
           <ServiceImage src={DogHugging} alt="A blonde female hugging a dog on a chair"/>
-          <p>Small Pet Visits</p>
+          <ServiceTitle>Small Pet Visits</ServiceTitle>
         </figure>
         <figure>
           <ServiceImage src={DogYawning} alt="Black dog in bed yanwing"/>
-          <p>Overnight Pet Sitting</p>
+          <ServiceTitle>Overnight Pet Sitting</ServiceTitle>
         </figure>
         <ServiceText>
           There's something to suit everyone but if you can't find what you're

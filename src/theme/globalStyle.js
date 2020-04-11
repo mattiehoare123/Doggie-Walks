@@ -23,7 +23,7 @@ li {
   list-style-type: none;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: ${(props) => props.theme.margin.bottom};
 
   &::after {
@@ -48,7 +48,7 @@ h2, h3 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   margin-bottom: 1em;
   text-align: justify;
