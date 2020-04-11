@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Locations } from '../components/Locations';
 
 const StyledHero = styled.section`
 width: 100%;
@@ -11,7 +12,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 position: relative;
-margin-bottom: 2.5em;
 
 @media(${(props) => props.theme.responsive.ipad}) {
   height: 25vh;
@@ -51,8 +51,12 @@ z-index: 1;
 export const Hero = (props) => {
 
   return (
-    <StyledHero style={{backgroundImage: `url(${props.image})` }}>
-      <HeroTitle>{props.title}</HeroTitle>
-    </StyledHero>
+    <React.Fragment>
+      <StyledHero style={{backgroundImage: `url(${props.image})` }}>
+        <HeroTitle>{props.title}</HeroTitle>
+      </StyledHero>
+      <Locations/>
+    </React.Fragment>
+
   )
 }
