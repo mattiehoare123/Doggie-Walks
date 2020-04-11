@@ -13,7 +13,7 @@ align-content: center;
 @media (${(props) => props.theme.responsive.ipad}) {
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 100px 1fr 200px;
+  grid-template-columns: 100px 1fr 180px;
   padding: 0 5em;
 }
 `
