@@ -2,6 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { Content } from './components/Content'
 
+const ContactGrid = styled.article`
+@media(${(props) => props.theme.responsive.laptop}) {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 40px;
+}
+`
+
 const ContactForm = styled.form`
 display: grid;
 `
@@ -22,6 +30,7 @@ border: 1px solid #A9A8A8;
 border-radius: .2em;
 padding: .7em;
 margin: .5em 0;
+
 `
 const Submit = styled.button`
 padding: .5em;
@@ -37,13 +46,17 @@ font-weight: ${(props) => props.theme.weights.semi};
 const StoreLocations = styled.section`
 margin: 2em 0;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+grid-row-gap: 20px;
 `
 const Location = styled.ul`
 line-height: 1.5;
 
 li {
   font-size: 1.3rem;
+  @media(${(props) => props.theme.responsive.laptop}) {
+    font-size: 1.5rem;
+  }
 }
 li:first-child {
   color: ${(props) => props.theme.colors.blue};
@@ -59,7 +72,7 @@ export const contact = () => {
         We have a wide variety of daycare facilities, listed below is all our locations and their address’.
         Feel free to pop in or fill out the form below.
       </p>
-      <article>
+      <ContactGrid>
         <ContactForm action="">
           <ContactLabel htmlFor="">Name</ContactLabel>
           <InputField type="text"/>
@@ -101,7 +114,7 @@ export const contact = () => {
             <li>WA5 1AF</li>
           </Location>
         </StoreLocations>
-      </article>
+      </ContactGrid>
     </Content>
   )
 }

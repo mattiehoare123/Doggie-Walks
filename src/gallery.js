@@ -23,7 +23,6 @@ const GalleryImages = styled.section`
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 grid-auto-rows: 250px;
-margin-bottom: 3em;
 grid-gap: 10px;
 
 @media(${(props) => props.theme.responsive.laptop}) {
@@ -31,7 +30,6 @@ grid-gap: 10px;
   grid-template-rows: 200px 200px 300px 200px;
 }
 `
-
 const DogImage = styled.img`
 width: 100%;
 height: 100%;

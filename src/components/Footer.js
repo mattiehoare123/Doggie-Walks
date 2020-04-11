@@ -7,6 +7,7 @@ background: #4A3B34;
 padding: 1em 2.3em 9em;
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+margin-top: 3em;
 @media(${(props) => props.theme.responsive.laptop}) {
   padding-bottom: 2em;
 }
