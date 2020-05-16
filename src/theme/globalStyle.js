@@ -47,8 +47,11 @@ h2, h3 {
   font-weight: ${(props) => props.theme.weights.semi};
 }
 
-p {
+p, li, label, button, a, input {
   font-size: 1.8rem;
+}
+
+p {
   line-height: 1.5;
   margin-bottom: 1em;
   text-align: justify;

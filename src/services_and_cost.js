@@ -3,26 +3,43 @@ import styled from 'styled-components'
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
 import DogGroup from './assets/Services/dogs-group.jpg'
+import SpecialOffer from './assets/special-offer.svg'
 import DogWalking from './assets/Services/dog-walking.svg'
 import HouseCalls from './assets/Services/house-calls.svg'
 import DayCare from './assets/Services/day-care.svg'
 
 
 const Service = styled.section`
+position: relative;
+
+// To display the special off sign inline with the title
+&:nth-child(3) > div:nth-child(2) > h2:nth-child(1) {
+  display: inline-block;
+}
+
+&:nth-child(3) > img:nth-child(1) {
+  align-self: center;
+}
+
 @media(${(props) => props.theme.responsive.ipad}) {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-top: 40px;
+
 }
 `
-const ServiceTitle = styled.h2`
-`
 const ServiceVector = styled.img`
-display: block;
-margin: 0 auto;
+margin-bottom: 1em;
 width: 268px;
 height: 177px;
 `
+const SpecialOfferSign = styled.img`
+width: 100px;
+height: 80px;
+position: relative;
+margin: 0 auto;
+`
+
 const Cost = styled.p`
 font-weight: ${(props) => props.theme.weights.semi};
 color: ${(props) => props.theme.colors.blue};
@@ -58,6 +75,8 @@ export const services_and_cost = () => {
           <ServiceVector src={HouseCalls} alt="Female with blue shirt on in a living room stroking a dog"/>
           <div>
             <h2>House Calls</h2>
+            <SpecialOfferSign src={SpecialOffer} alt="50% off house calls for new customer blue discount sign"/>
+            <br/>
             <Cost>£15/H</Cost>
             <Time>Duration: 1 hour (enquire for more)</Time>
             <p>

@@ -10,11 +10,11 @@ const LocationsList = styled.ul`
 display: flex;
 flex-wrap: wrap;
 width: 100%;
-max-width: 1200px;
+max-width: 1300px;
 margin: 0 auto;
 justify-content: space-around;
 margin-bottom: 2.5em;
-padding: .2em;
+padding: .5em;
 `
 const Area = styled.li`
 font-size: 1.4rem;

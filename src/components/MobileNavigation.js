@@ -57,7 +57,7 @@ export const MobileNavigation = () => {
       <LogoImage src={logo} alt=""/>
         <MobileNav>
           <li>
-            <StyledLink to="/">
+            <StyledLink to="home">
               <Icon src={home} alt="Home icon"/>
               <IconText>Home</IconText>
             </StyledLink>

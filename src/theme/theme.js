@@ -17,8 +17,8 @@ export default {
   },
 
   responsive: {
-    ipad: '(min-width: 550px)',
-    laptop: '(min-width: 800px)'
+    ipad: 'min-width: 760px',
+    laptop: 'min-width: 800px'
   },
 
   blueUnderline: {

@@ -18,7 +18,7 @@ position: relative;
 }
 
 @media(${(props) => props.theme.responsive.laptop}) {
-  height: 50vh;
+  height: 60vh;
 }
 
 &::after {
@@ -39,12 +39,12 @@ font-size: 2.5rem;
   font-size: 3.5rem;
 }
 @media(${(props) => props.theme.responsive.laptop}) {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
 }
 text-align: center;
 text-transform: uppercase;
 color: ${(props) => props.theme.colors.white};
-color: ${(props) => props.theme.weights.bold};
+font-weight: ${(props) => props.theme.weights.bold};
 z-index: 1;
 `
 

@@ -15,14 +15,13 @@ const TeamGrid = styled.section`
   grid-gap: 20px;
 }
 `
-
 const MeetTheTeamHeading = styled.h2`
 grid-column: 1/-1;
 `
 
 const PhotoCardsGrid = styled.section`
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(130px, 2fr));
+grid-template-columns: repeat(auto-fit, minmax(170px, 2fr));
 justify-items: center;
 grid-gap: 1em;
 margin-bottom: ${(props) => props.theme.margin.bottom};
@@ -30,12 +29,24 @@ margin-bottom: ${(props) => props.theme.margin.bottom};
 
 const PhotoCard = styled.figure`
 background-color: #F7F7F7;
-width: 150px;
+width: 160px;
 height: 200px;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding-top: 1em;
+padding-top: 1.5em;
+
+&:first-of-type,
+&:nth-of-type(4) {
+transform: rotate(4deg)
+}
+
+&:nth-of-type(2),
+&:nth-of-type(3) {
+transform: rotate(-4deg)
+}
+
+
 `
 const Name = styled.p`
 font-weight: ${(props) => props.theme.weights.semi};
@@ -49,44 +60,46 @@ color: ${(props) => props.theme.colors.blue};
 
 export const meet_the_team = () => {
   return (
-    <Content>
+    <React.Fragment>
       <Hero title="Meet The Team" image={DogFace}/>
-      <TeamGrid>
-        <MeetTheTeamHeading>Meet The Doggie Walks Team!</MeetTheTeamHeading>
-        <article>
-          <p>
-            We’re fully trained and insured to work with animals and are committed to the health
-            and benefits of your pet. We aim to keep providing the best knowledge regarding dogs as we can,
-            and to do this we believe you cannot sit still in this occupation as we learn more about dogs daily.
-          </p>
-          <p>
-            We ensure that our knowledge is kept up-to-date by attending regular seminars and courses presented by
-            well-respected canine trainers, behaviorists and practitioners.
-          </p>
-        </article>
-        <PhotoCardsGrid>
-          <PhotoCard>
-            <img src={Lori} alt="Close up of a short brown hair female smiling in red lipstick"/>
-            <Name>Lori Hanson</Name>
-            <JobTitle>Founder of Doggie Walks</JobTitle>
-          </PhotoCard>
-          <PhotoCard>
-            <img src={Gary} alt="Close up of a ginger hair male with a short beard smirking"/>
-            <Name>Gary Simpson</Name>
-            <JobTitle>Team Manager</JobTitle>
-          </PhotoCard>
-          <PhotoCard>
-            <img src={Rebecca} alt="Close up of a brown hair female with glasses with a tight lipped smile"/>
-            <Name>Rebecca Harrison</Name>
-            <JobTitle>Professional Dog Walker</JobTitle>
-          </PhotoCard>
-          <PhotoCard>
-            <img src={Jonna} alt="Close up of a tanned blonde hair female smiling"/>
-            <Name>Joanna Davies</Name>
-            <JobTitle>Professional Dog Walker</JobTitle>
-          </PhotoCard>
-        </PhotoCardsGrid>
-      </TeamGrid>
-    </Content>
+      <Content>
+        <TeamGrid>
+          <MeetTheTeamHeading>Meet The Doggie Walks Team!</MeetTheTeamHeading>
+          <article>
+            <p>
+              We’re fully trained and insured to work with animals and are committed to the health
+              and benefits of your pet. We aim to keep providing the best knowledge regarding dogs as we can,
+              and to do this we believe you cannot sit still in this occupation as we learn more about dogs daily.
+            </p>
+            <p>
+              We ensure that our knowledge is kept up-to-date by attending regular seminars and courses presented by
+              well-respected canine trainers, behaviorists and practitioners.
+            </p>
+          </article>
+          <PhotoCardsGrid>
+            <PhotoCard>
+              <img src={Lori} alt="Close up of a short brown hair female smiling in red lipstick"/>
+              <Name>Lori Hanson</Name>
+              <JobTitle>Founder of Doggie Walks</JobTitle>
+            </PhotoCard>
+            <PhotoCard>
+              <img src={Gary} alt="Close up of a ginger hair male with a short beard smirking"/>
+              <Name>Gary Simpson</Name>
+              <JobTitle>Team Manager</JobTitle>
+            </PhotoCard>
+            <PhotoCard>
+              <img src={Rebecca} alt="Close up of a brown hair female with glasses with a tight lipped smile"/>
+              <Name>Rebecca Harrison</Name>
+              <JobTitle>Professional Dog Walker</JobTitle>
+            </PhotoCard>
+            <PhotoCard>
+              <img src={Jonna} alt="Close up of a tanned blonde hair female smiling"/>
+              <Name>Joanna Davies</Name>
+              <JobTitle>Professional Dog Walker</JobTitle>
+            </PhotoCard>
+          </PhotoCardsGrid>
+        </TeamGrid>
+      </Content>
+    </React.Fragment>
   )
 }

@@ -7,20 +7,20 @@ const FooterContainer = styled.div`
 background: #4A3B34;
 `
 const Grass = styled.div`
-margin-top: 100px;
 background: url('${ grass}') repeat;
 right: 20px;
-height: 40px;
+height: 35px;
 `
 
 const StyledFooter = styled.footer`
 max-width: 1150px;
 margin: 0 auto;
-padding: 2.5em 2.3em 9em;
+padding: 1em 2.3em 9em;
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+grid-row-gap: 1em;
 @media(${(props) => props.theme.responsive.laptop}) {
-  padding-bottom: 2em;
+  padding: 2em;
 }
 `
 const DogHouse = styled.img`
@@ -35,7 +35,7 @@ color: ${(props) => props.theme.colors.white};
 `
 const OpeningTimesTitle = styled.h3`
 font-size: 2.3rem;
-font-weight: ${(props) => props.theme.weights.regular};
+font-weight: ${(props) => props.theme.weights.semi};
 `
 const OpeningDayTimes = styled.ul`
 line-height: 1.3;
@@ -54,12 +54,20 @@ const CallUs = styled.p`
   margin-top: 0em;
 }
 grid-column: 1/-1;
-margin-top: .8em;
+color: ${(props) => props.theme.colors.orange};
+font-weight: ${(props) => props.theme.weights.semi};
+`
+const PhoneNumber = styled.a`
 font-size: 2.3rem;
 color: ${(props) => props.theme.colors.orange};
 font-weight: ${(props) => props.theme.weights.semi};
+text-decoration: none;
 
+&:hover {
+  color: ${(props) => props.theme.colors.white};
+}
 `
+
 export const Footer = () => {
   return (
     <React.Fragment>
@@ -77,7 +85,7 @@ export const Footer = () => {
           </OpeningTimes>
           <CallUs>
             Call Us To Walk Your Dog On: <br />
-            01695 883 112
+          <PhoneNumber href="tel:01695 883 112">01695 883 112</PhoneNumber>
           </CallUs>
         </StyledFooter>
       </FooterContainer>

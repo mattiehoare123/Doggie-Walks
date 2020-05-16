@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components'
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.svg';
 
@@ -13,13 +13,13 @@ align-content: center;
 @media (${(props) => props.theme.responsive.ipad}) {
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 100px 1fr 180px;
+  grid-template-columns: auto 700px auto;
   padding: 0 5em;
 }
 `
 const Logo = styled.img`
 width: 100px;
-height: 85px;
+height: 75px;
 `
 const NavBar = styled.nav`
 @media (max-width: 550px) {
@@ -34,8 +34,6 @@ ul {
   justify-content: space-around;
 }
 li {
-  display: flex;
-  justify-content: space-around;
   font-size: 2rem;
   @media (${(props) => props.theme.responsive.ipad}) {
     font-size: 1.4rem;
@@ -62,12 +60,11 @@ justify-content: center;
 
 const ContactDetails = styled.a`
 text-decoration: none;
-font-size: 1.5rem;
+font-size: 1.7rem;
 
-@media (${(props) => props.theme.responsive.ipad}) {
-  font-size: 1.7rem;
+&:hover {
+  text-decoration: underline;
 }
-
 
 &:first-child {
   color: ${(props) => props.theme.colors.orange};
@@ -83,10 +80,12 @@ font-size: 1.5rem;
 export const Navigation = () => {
   return (
     <Header>
-      <Logo src={logo} alt="Dog paw with doggie walks underneath" />
+      <StyledLink to="/">
+        <Logo src={logo} alt="Dog paw with doggie walks underneath" />
+      </StyledLink>
       <NavBar>
         <ul>
-          <li><StyledLink to="/">Home</StyledLink></li>
+          <li><StyledLink to="home">Home</StyledLink></li>
           <li><StyledLink to="about_us">About</StyledLink></li>
           <li><StyledLink to="services_and_cost">Services & Cost</StyledLink></li>
           <li><StyledLink to="gallery">Gallery</StyledLink></li>
@@ -94,8 +93,8 @@ export const Navigation = () => {
         </ul>
       </NavBar>
       <Contact>
-        <ContactDetails href="">01695 883 112</ContactDetails>
-        <ContactDetails href="info@doggiewalks.co.uk">info@doggiewalks.co.uk</ContactDetails>
+        <ContactDetails href="tel:01695 883 112">01695 883 112</ContactDetails>
+        <ContactDetails href="mailto:info@doggiewalks.co.uk">info@doggiewalks.co.uk</ContactDetails>
       </Contact>
     </Header>
   )
