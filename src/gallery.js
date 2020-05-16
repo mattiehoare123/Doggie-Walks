@@ -61,6 +61,7 @@ export const gallery = () => {
           <DogImage src={TanPembroke} alt="Tan and white pembroke dog sitting in park"/>
           <DogImage src={BlondePembroke} alt="Blonde pembroke dog panting walking on edge of pond"/>
           <DogImage src={WhiteBulldog} alt="White and black bulldog on lead sitting in park"/>
+          <DogImage src={OrangeCharles} alt="Orange and hwite king charles dog"/>
           <DogImage src={BlackLabrador} alt="Black labrador dog lying on grass"/>
           <DogImage src={BlackBulldog} alt="Black and white bulldog sittin on grass"/>
           <DogImage src={BrownLabrador} alt="Brown labrador dog lying on grass"/>
