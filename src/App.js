@@ -8,7 +8,6 @@ import { gallery } from './gallery';
 import { contact } from './contact';
 import { Navigation } from './components/Navigation';
 import { MobileNavigation } from './components/MobileNavigation';
-import { Content } from './components/Content';
 import { Footer } from './components/Footer';
 
 function App(props) {

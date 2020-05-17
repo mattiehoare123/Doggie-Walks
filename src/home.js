@@ -11,14 +11,14 @@ import { Locations } from './components/Locations';
 const HomeHeadings = styled.h2`
 text-align: center;
 font-size: 3rem;
-// &::after {
-//   content: '';
-//   display: block;
-//   height: 3px;
-//   width: 60px;
-//   margin: 1em auto;
-//   background: ${(props) => props.theme.colors.blue};
-// }
+&::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 60px;
+  margin: 1em auto;
+  background: ${(props) => props.theme.colors.blue};
+}
 &:nth-of-type(1) {
   font-size: 2.5rem;
   grid-column: 1/-1;
@@ -30,17 +30,18 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 padding-left: 1em;
-height: 20vh;
+height: 25vh;
 background-image: url(${Dog});
 background-size: cover;
 background-repeat: no-repeat;
 background-size: 100% 100%;
 
-@media(${(props) => props.theme.responsive.ipad}) {;
-  height: 25vh;
-}
 
 @media(${(props) => props.theme.responsive.laptop}) {
+  div {
+    width: 1100px;
+    margin: 0 auto;
+  }
   height: 60vh;
 }
 `
@@ -51,18 +52,21 @@ font-size: 2rem;
   font-size: 3.5rem;
 }
 @media(${(props) => props.theme.responsive.laptop}) {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
 }
 `
 
 const CallNow = styled.button`
 color: ${(props) => props.theme.colors.white};
 font-weight: ${(props) => props.theme.weights.bold};
-width: 150px;
+width: 100px;
+@media(${(props) => props.theme.responsive.ipad}) {
+  width: 150px;
+}
 text-transform: uppercase;
 background: #43A838;
 border: none;
-padding: .2em;
+padding: .4em;
 font-size: 1.5rem;
 border-radius: .1em;
 margin-top: .5em;
@@ -136,10 +140,12 @@ export const home = () => {
   return (
     <React.Fragment>
       <Hero>
-        <DogWalkingTitle>Do You Need<br/> Your Dog Walking?</DogWalkingTitle>
-        <CallNow>
-          <PhoneNumber href="mailto:info@doggiewalks.co.uk">Call Now</PhoneNumber>
-        </CallNow>
+        <div>
+          <DogWalkingTitle>Do You Need<br/> Your Dog Walking?</DogWalkingTitle>
+          <CallNow>
+            <PhoneNumber href="mailto:info@doggiewalks.co.uk">Call Now</PhoneNumber>
+          </CallNow>
+        </div>
       </Hero>
       <Locations/>
       <Content>

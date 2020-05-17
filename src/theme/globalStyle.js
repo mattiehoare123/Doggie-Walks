@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import Paw from '../assets/dog-paw.svg'
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 html {
   height: 100%;
@@ -47,7 +47,7 @@ h2, h3 {
   font-weight: ${(props) => props.theme.weights.semi};
 }
 
-p, li, label, button, a, input {
+p, li, label, button, a, input, textarea {
   font-size: 1.8rem;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from '../assets/logo.svg';
 
 const Header = styled.header`
@@ -35,16 +35,20 @@ ul {
 }
 li {
   font-size: 2rem;
+  font-weight: 500;
   @media (${(props) => props.theme.responsive.ipad}) {
     font-size: 1.4rem;
   }
   @media (${(props) => props.theme.responsive.laptop}) {
     font-size: 1.7rem;
   }
+  .selected  {
+    color: ${(props) => props.theme.colors.orange};
+  }
 }
 
 `
-const StyledLink =  styled(Link)`
+const StyledLink = styled(NavLink)`
 text-decoration: none;
 color: ${(props) => props.theme.colors.black};
 &:hover {
@@ -85,11 +89,11 @@ export const Navigation = () => {
       </StyledLink>
       <NavBar>
         <ul>
-          <li><StyledLink to="home">Home</StyledLink></li>
-          <li><StyledLink to="about_us">About</StyledLink></li>
-          <li><StyledLink to="services_and_cost">Services & Cost</StyledLink></li>
-          <li><StyledLink to="gallery">Gallery</StyledLink></li>
-          <li><StyledLink to="contact">Contact</StyledLink></li>
+          <li><StyledLink to="home" activeClassName="selected">Home</StyledLink></li>
+          <li><StyledLink to="about_us" activeClassName="selected">About</StyledLink></li>
+          <li><StyledLink to="services_and_cost" activeClassName="selected">Services & Cost</StyledLink></li>
+          <li><StyledLink to="gallery" activeClassName="selected">Gallery</StyledLink></li>
+          <li><StyledLink to="contact" activeClassName="selected">Contact</StyledLink></li>
         </ul>
       </NavBar>
       <Contact>
