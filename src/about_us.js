@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
-import DogRunning from './assets/AboutUs/dog-running.jpg'
+import DogRunning from './assets/AboutUs/Human-Dog.jpeg'
 import DogWoods from './assets/AboutUs/dog-woods.jpg'
 
 const DogInWoods = styled.img`

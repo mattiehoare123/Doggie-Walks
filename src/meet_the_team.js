@@ -1,7 +1,8 @@
 import React from 'react'
 import { Hero } from './components/Hero'
+import { PhotoCard } from './components/PhotoCard'
 import { Content } from './components/Content'
-import DogFace from './assets/Team/dog-face.jpg'
+import DogFace from './assets/Team/gallery-hero.jpg'
 import Lori from './assets/Team/lori-hanson.jpg'
 import Gary from './assets/Team/gary-simpson.jpg'
 import Rebecca from './assets/Team/rebecca-harrison.jpg'
@@ -21,41 +22,10 @@ grid-column: 1/-1;
 
 const PhotoCardsGrid = styled.section`
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(170px, 2fr));
+grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
 justify-items: center;
 grid-gap: 1em;
 margin-bottom: ${(props) => props.theme.margin.bottom};
-`
-
-const PhotoCard = styled.figure`
-background-color: #F7F7F7;
-width: 160px;
-height: 200px;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding-top: 1.5em;
-
-&:first-of-type,
-&:nth-of-type(4) {
-transform: rotate(4deg)
-}
-
-&:nth-of-type(2),
-&:nth-of-type(3) {
-transform: rotate(-4deg)
-}
-
-
-`
-const Name = styled.p`
-font-weight: ${(props) => props.theme.weights.semi};
-margin: .8em 0 0;
-`
-
-const JobTitle = styled.p`
-font-size: 1rem;
-color: ${(props) => props.theme.colors.blue};
 `
 
 export const meet_the_team = () => {
@@ -77,26 +47,30 @@ export const meet_the_team = () => {
             </p>
           </article>
           <PhotoCardsGrid>
-            <PhotoCard>
-              <img src={Lori} alt="Close up of a short brown hair female smiling in red lipstick"/>
-              <Name>Lori Hanson</Name>
-              <JobTitle>Founder of Doggie Walks</JobTitle>
-            </PhotoCard>
-            <PhotoCard>
-              <img src={Gary} alt="Close up of a ginger hair male with a short beard smirking"/>
-              <Name>Gary Simpson</Name>
-              <JobTitle>Team Manager</JobTitle>
-            </PhotoCard>
-            <PhotoCard>
-              <img src={Rebecca} alt="Close up of a brown hair female with glasses with a tight lipped smile"/>
-              <Name>Rebecca Harrison</Name>
-              <JobTitle>Professional Dog Walker</JobTitle>
-            </PhotoCard>
-            <PhotoCard>
-              <img src={Jonna} alt="Close up of a tanned blonde hair female smiling"/>
-              <Name>Joanna Davies</Name>
-              <JobTitle>Professional Dog Walker</JobTitle>
-            </PhotoCard>
+            <PhotoCard
+              image={Lori}
+              alt="Close up of a short brown hair female smiling in red lipstick"
+              name="Lori Hanson"
+              title="Founder of Doggie Walks"
+              />
+            <PhotoCard
+              image={Gary}
+              alt="Close up of a ginger hair male with a short beard smirking"
+              name="Gary Simpson"
+              title="Team Manager"
+              />
+            <PhotoCard
+              image={Rebecca}
+              alt="Close up of a brown hair female with glasses with a tight lipped smile"
+              name="Rebecca Harrison"
+              title="Professional Dog Walker"
+              />
+            <PhotoCard
+              image={Jonna}
+              alt="Close up of a tanned blonde hair female smiling"
+              name="Joanna Davies"
+              title="Professional Dog Walker"
+              />
           </PhotoCardsGrid>
         </TeamGrid>
       </Content>

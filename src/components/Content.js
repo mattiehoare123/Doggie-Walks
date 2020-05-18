@@ -9,6 +9,7 @@ background-size: 50% 50%;
 
 @media(${(props) => props.theme.responsive.ipad}) {
   padding: 0 5em inherit;
+  background-size: 100% 100%;
 }
 max-width: 1000px;
 margin: 0 auto;

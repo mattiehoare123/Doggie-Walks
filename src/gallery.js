@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
-import GalleryHero from './assets/Gallery/gallery-hero.jpg'
+import DogFace from './assets/Gallery/dog-face.jpg'
 import BlondeHavanesse from './assets/Gallery/light-blonde-havanese-dog.jpg'
 import DogWalkingMountain from './assets/Gallery/dog-walking-mountains.jpg'
 import BlackShepherd from './assets/Gallery/black-german-shepherd.jpg'
@@ -16,15 +16,16 @@ import BrownLabrador from './assets/Gallery/brown-labrador-dog.jpg'
 const GalleryImages = styled.section`
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-grid-auto-rows: 250px;
+//Each row will be 200px height
+grid-auto-rows: 200px;
 grid-gap: 15px;
-margin: 0 auto;
 
 @media(${(props) => props.theme.responsive.laptop}) {
   grid-template-columns: 3fr repeat(4,1fr) 3fr;
   grid-template-rows: 400px 300px 350px 350px;
 }
 `
+
 const DogImage = styled.img`
 width: 100%;
 height: 100%;
@@ -51,8 +52,7 @@ height: 100%;
 export const gallery = () => {
   return (
     <React.Fragment>
-      <Hero title="Gallery" image={GalleryHero}/>
-      <Content className="ContentGrid">
+      <Hero title="Gallery" image={DogFace}/>
         <GalleryImages>
           <DogImage src={BlondeHavanesse} alt="Blonde havanesse dog laying on grass"/>
           <DogImage src={DogWalkingMountain} alt="Female with blue hat on walking a dog in the mountains"/>
@@ -64,7 +64,6 @@ export const gallery = () => {
           <DogImage src={BlackLabrador} alt="Black labrador dog lying on grass"/>
           <DogImage src={BrownLabrador} alt="Brown labrador dog lying on grass"/>
         </GalleryImages>
-      </Content>
     </React.Fragment>
   )
 }

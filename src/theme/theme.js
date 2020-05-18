@@ -29,4 +29,5 @@ export default {
     margin: '1em auto',
     background: 'blue'
   }
+
 }

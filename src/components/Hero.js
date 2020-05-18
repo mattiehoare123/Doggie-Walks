@@ -6,8 +6,8 @@ const StyledHero = styled.section`
 width: 100%;
 height: 25vh;
 background-size: cover;
+background-position: center;
 background-repeat: no-repeat;
-background-size: 100% 100%;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -26,7 +26,7 @@ position: relative;
   display: block;
   position: absolute;
   background: ${(props) => props.theme.colors.black};
-  opacity: 0.5;
+  opacity: 0.6;
   width: 100%;
   height: 100%;
   top: 0;

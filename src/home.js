@@ -6,11 +6,17 @@ import DogSitting from './assets/Home/dog-sitting.jpg'
 import DogHugging from './assets/Home/dog-hugging.jpg'
 import DogYawning from './assets/Home/dog-yawning.jpg'
 import styled from 'styled-components';
+import { ServiceOffer } from './components/ServiceOffer';
 import { Locations } from './components/Locations';
+import { flexColumn } from './theme/mixins.js'
+
 
 const HomeHeadings = styled.h2`
 text-align: center;
 font-size: 3rem;
+@media(${(props) => props.theme.responsive.laptop}) {
+  font-size: 3rem;
+}
 &::after {
   content: '';
   display: block;
@@ -26,16 +32,14 @@ font-size: 3rem;
 `
 
 const Hero = styled.section`
-display: flex;
-flex-direction: column;
+//Mixin for for display flex and column direction
+${flexColumn};
 justify-content: center;
 padding-left: 1em;
 height: 25vh;
 background-image: url(${Dog});
 background-size: cover;
-background-repeat: no-repeat;
 background-size: 100% 100%;
-
 
 @media(${(props) => props.theme.responsive.laptop}) {
   div {
@@ -57,15 +61,8 @@ font-size: 2rem;
 `
 
 const CallNow = styled.button`
-color: ${(props) => props.theme.colors.white};
-font-weight: ${(props) => props.theme.weights.bold};
-width: 100px;
-@media(${(props) => props.theme.responsive.ipad}) {
-  width: 150px;
-}
 text-transform: uppercase;
 background: #43A838;
-border: none;
 padding: .4em;
 font-size: 1.5rem;
 border-radius: .1em;
@@ -73,7 +70,6 @@ margin-top: .5em;
 `
 
 const PhoneNumber = styled.a`
-text-decoration: none;
 color: ${(props) => props.theme.colors.white};
 font-weight: ${(props) => props.theme.weights.bold};
 text-transform: uppercase;
@@ -109,29 +105,11 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 justify-content: center;
 
 figure {
-  display: flex;
-  flex-direction: column;
+  ${flexColumn};
   align-items: center;
 }
 `
 
-const ServiceImage = styled.img`
-width: 96px;
-height: 89px;
-margin-bottom: .7em;
-
-@media(${(props) => props.theme.responsive.laptop}) {
-  height: 150px;
-  width: 150px;
-}
-`
-const ServiceTitle = styled.p`
-font-weight: ${(props) => props.theme.weights.bold};
-`
-
-const Pupply = styled.p`
-font-size: 1.5rem;
-`
 const ServiceText = styled.p`
 grid-column: 1/-1;
 `
@@ -173,19 +151,22 @@ export const home = () => {
         </article>
         <Services>
           <HomeHeadings>We Also Offer Different Services Such As</HomeHeadings>
-          <figure>
-            <ServiceImage src={DogSitting} alt="Brown dog sitting on a couch"/>
-            <ServiceTitle style={{"margin": 0}}>Pet Sitting </ServiceTitle>
-            <Pupply>(Pupply and Elderly)</Pupply>
-          </figure>
-          <figure>
-            <ServiceImage src={DogHugging} alt="A blonde female hugging a dog on a chair"/>
-            <ServiceTitle>Small Pet Visits</ServiceTitle>
-          </figure>
-          <figure>
-            <ServiceImage src={DogYawning} alt="Black dog in bed yanwing"/>
-            <ServiceTitle>Overnight Pet Sitting</ServiceTitle>
-          </figure>
+            <ServiceOffer
+              image={DogSitting}
+              alt="Brown dog sitting on a couch"
+              title="Pet Sitting"
+              subtitle="(Pupply and Elderly)"
+              />
+              <ServiceOffer
+                image={DogHugging}
+                alt="A blonde female hugging a dog on a chair"
+                title="Small Pet Visits"
+                />
+                <ServiceOffer
+                  image={DogYawning}
+                  alt="Black dog in bed yanwing"
+                  title="Overnight Pet Sitting"
+                  />
           <ServiceText>
             There's something to suit everyone but if you can't find what you're
             looking for don't hesitate to <span>contact us</span> and we'll find the perfect solution

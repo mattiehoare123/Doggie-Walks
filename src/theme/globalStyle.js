@@ -57,10 +57,18 @@ p {
   text-align: justify;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Highlight important text in paragraphs*/
 span {
   color: ${(props) => props.theme.colors.blue};
   font-weight: ${(props) => props.theme.weights.semi};
+}
+
+button {
+  border: none;
 }
 `
 export default GlobalStyle
