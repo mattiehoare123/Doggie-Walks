@@ -9,14 +9,11 @@ import styled from 'styled-components';
 import { ServiceOffer } from './components/ServiceOffer';
 import { Locations } from './components/Locations';
 import { flexColumn } from './theme/mixins.js'
+import { BackgroundCover } from './theme/mixins.js'
 
 
 const HomeHeadings = styled.h2`
 text-align: center;
-font-size: 3rem;
-@media(${(props) => props.theme.responsive.laptop}) {
-  font-size: 3rem;
-}
 &::after {
   content: '';
   display: block;
@@ -32,14 +29,13 @@ font-size: 3rem;
 `
 
 const Hero = styled.section`
-//Mixin for for display flex and column direction
+//Mixin for display flex and column direction
 ${flexColumn};
 justify-content: center;
 padding-left: 1em;
 height: 25vh;
-background-image: url(${Dog});
-background-size: cover;
-background-size: 100% 100%;
+//Mixin for background image, cover and positon
+${BackgroundCover(Dog)};
 
 @media(${(props) => props.theme.responsive.laptop}) {
   div {
@@ -51,13 +47,9 @@ background-size: 100% 100%;
 `
 const DogWalkingTitle = styled.h1`
 color: ${(props) => props.theme.colors.white};
-font-size: 2rem;
-@media(${(props) => props.theme.responsive.ipad}) {
-  font-size: 3.5rem;
-}
-@media(${(props) => props.theme.responsive.laptop}) {
-  font-size: 4.5rem;
-}
+//Minmuim Size, Preferred Size & Maximum Size of font
+font-size: clamp(2.5rem, 6vw, 4.5rem);
+
 `
 
 const CallNow = styled.button`
@@ -74,10 +66,8 @@ color: ${(props) => props.theme.colors.white};
 font-weight: ${(props) => props.theme.weights.bold};
 text-transform: uppercase;
 padding: .2em;
-font-size: 1.5rem;
-@media(${(props) => props.theme.responsive.ipad}) {
-  font-size: 2rem;
-}
+font-size: clamp(1.5rem, 3vw, 2rem);
+
 `
 
 const TextRight = styled.p`

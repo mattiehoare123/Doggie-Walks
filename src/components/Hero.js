@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Locations } from '../components/Locations';
+import { BackgroundCover } from '../theme/mixins.js'
+
 
 const StyledHero = styled.section`
 width: 100%;
 height: 25vh;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
 display: flex;
+${BackgroundCover};
 align-items: center;
 justify-content: center;
 position: relative;
@@ -34,13 +34,7 @@ position: relative;
 }
 `
 const HeroTitle = styled.h1`
-font-size: 2.5rem;
-@media(${(props) => props.theme.responsive.ipad}) {
-  font-size: 3.5rem;
-}
-@media(${(props) => props.theme.responsive.laptop}) {
-  font-size: 5.5rem;
-}
+font-size: clamp(2.5rem, 8vw, 5.5rem);
 text-align: center;
 text-transform: uppercase;
 color: ${(props) => props.theme.colors.white};

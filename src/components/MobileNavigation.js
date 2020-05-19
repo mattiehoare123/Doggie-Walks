@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from "react-router-dom";
+import { MobileNavLink } from '../components/MobileNavLinks'
 import home from '../assets/MobileNavigation/home.svg';
 import team from '../assets/MobileNavigation/team.svg';
 import services from '../assets/MobileNavigation/services.svg';
@@ -27,70 +27,58 @@ margin: 0 auto;
 const MobileNav = styled.nav`
 padding: 20px 0 10px;
 background-color: #f6f6f6;
-display: flex;
-justify-content: space-around;
 height: 80px;
-
+//Active colour
 .selected > p  {
   color: ${(props) => props.theme.colors.orange};
+}
 
+ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 li {
   height: 55px;
 }
 `
-const StyledLink =  styled(NavLink)`
-text-decoration: none;
-`
-
-const Icon = styled.img`
-width: 42.8px;
-height: 34.9px;
-`
-
-const IconText = styled.p`
-font-size: 1.3rem;
-color: #878585;
-text-align: center;
-`
-
-
 export const MobileNavigation = () => {
   return (
     <StickyNav>
       <LogoImage src={logo} alt=""/>
         <MobileNav>
-          <li>
-            <StyledLink to="home" activeClassName="selected">
-              <Icon src={home} alt="Home icon"/>
-              <IconText>Home</IconText>
-            </StyledLink>
-          </li>
-          <li>
-            <StyledLink to="about_us" activeClassName="selected">
-              <Icon src={team} alt="Three team members icon"/>
-              <IconText>About Us</IconText>
-            </StyledLink>
-          </li>
-          <li>
-            <StyledLink to="services_and_cost" activeClassName="selected">
-              <Icon src={services} alt="A dog walking a dog icon"/>
-              <IconText>Services</IconText>
-            </StyledLink>
-          </li>
-          <li>
-            <StyledLink to="gallery" activeClassName="selected">
-              <Icon src={gallery} alt="A picture icon"/>
-              <IconText>Gallery</IconText>
-            </StyledLink>
-          </li>
-          <li>
-            <StyledLink to="contact" activeClassName="selected">
-              <Icon src={contact} alt="An email icon"/>
-              <IconText>Contact</IconText>
-            </StyledLink>
-          </li>
+          <ul>
+            <MobileNavLink
+              path="home"
+              icon={home}
+              alt="Home icon"
+              text="Home"
+              />
+            <MobileNavLink
+              path="about_us"
+              icon={team}
+              alt="Three team members icon"
+              text="About Us"
+              />
+            <MobileNavLink
+              path="services_and_cost"
+              icon={services}
+              alt="A dog walking a dog icon"
+              text="Services"
+              />
+            <MobileNavLink
+              path="gallery"
+              icon={gallery}
+              alt="A picture icon"
+              text="Gallery"
+              />
+            <MobileNavLink
+              path="contact"
+              icon={contact}
+              alt="An email icon"
+              text="Contact"
+              />
+          </ul>
         </MobileNav>
     </StickyNav>
   )

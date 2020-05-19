@@ -28,7 +28,7 @@ margin: .8em 0 0;
 `
 
 const JobTitle = styled.p`
-font-size: 1rem;
+font-size: 1.2rem;
 color: ${(props) => props.theme.colors.blue};
 `
 

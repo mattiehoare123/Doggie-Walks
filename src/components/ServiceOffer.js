@@ -22,7 +22,7 @@ font-size: 1.5rem;
 export const ServiceOffer = ({image, alt, title, subtitle}) => {
   return (
     <figure>
-      <ServiceImage src={image} alt={alt}/>
+      <ServiceImage src={image} alt={alt} loading="lazy"/>
       <ServiceTitle>{title}</ServiceTitle>
       <Pupply>{subtitle}</Pupply>
     </figure>

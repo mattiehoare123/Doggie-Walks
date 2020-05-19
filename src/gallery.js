@@ -59,10 +59,10 @@ export const gallery = () => {
           <DogImage src={BlackShepherd} alt="Black and tan german shepherd dog lying on grass"/>
           <DogImage src={TanPembroke} alt="Tan and white pembroke dog sitting in park"/>
           <DogImage src={BlondePembroke} alt="Blonde pembroke dog panting walking on edge of pond"/>
-          <DogImage src={WhiteBulldog} alt="White and black bulldog on lead sitting in park"/>
-          <DogImage src={BlackBulldog} alt="Black and white bulldog sittin on grass"/>
-          <DogImage src={BlackLabrador} alt="Black labrador dog lying on grass"/>
-          <DogImage src={BrownLabrador} alt="Brown labrador dog lying on grass"/>
+          <DogImage src={WhiteBulldog} alt="White and black bulldog on lead sitting in park" loading="lazy"/>
+          <DogImage src={BlackBulldog} alt="Black and white bulldog sittin on grass" loading="lazy"/>
+          <DogImage src={BlackLabrador} alt="Black labrador dog lying on grass" loading="lazy"/>
+          <DogImage src={BrownLabrador} alt="Brown labrador dog lying on grass" loading="lazy"/>
         </GalleryImages>
     </React.Fragment>
   )

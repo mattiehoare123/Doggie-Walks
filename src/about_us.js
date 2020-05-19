@@ -25,7 +25,7 @@ export const about_us = () => {
             to walk their pets regularly. Thats why we established Doggie Walks, to help people across <span>Lancashire</span> and <span>Merseyside</span> ensure their dogs live happy lives.
           </p>
         </article>
-        <DogInWoods src={DogWoods} alt="Dog on a path in the woods"/>
+        <DogInWoods src={DogWoods} alt="Dog on a path in the woods" loading="lazy"/>
         <article>
           <h2>How It Works</h2>
           <p>

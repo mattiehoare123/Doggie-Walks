@@ -11,8 +11,10 @@ import { MobileNavigation } from './components/MobileNavigation';
 import { Footer } from './components/Footer';
 
 function App(props) {
+  {/*All these elements will appear on every page*/}
   return (
       <React.Fragment>
+        {/*React Fragment lets to group elements*/}
         <BrowserRouter>
           <Navigation/>
           <Route path="/home" exact component={home}/>
@@ -21,8 +23,10 @@ function App(props) {
           <Route path="/services_and_cost" exact component={services_and_cost}/>
           <Route path="/gallery" exact component={gallery}/>
           <Route path="/contact" exact component={contact}/>
+          {/*Mobile Navigation*/}
           <MobileNavigation/>
         </BrowserRouter>
+        {/*Foooter*/}
         <Footer/>
       </React.Fragment>
   );

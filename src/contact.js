@@ -17,7 +17,6 @@ const ContactGrid = styled.article`
 const ContactForm = styled.form`
 display: grid;
 `
-
 const Submit = styled.button`
 padding: .5em;
 width: 100px;
@@ -78,19 +77,23 @@ export const contact = () => {
             {/*Submit*/}
             <Submit>Submit</Submit>
           </ContactForm>
+          {/*Locations*/}
           <StoreLocations>
+            {/*Ormskirk*/}
             <Address
               area="Ormskirk"
               address="3-5 St Helens Road"
               town="Ormskirk"
               postcode="L35 4PO"
               />
+            {/*Southport*/}
             <Address
               area="Southport"
               address="150 Lord Street"
               town="Southport"
               postcode="PR9 0NP"
               />
+            {/*Warrington*/}
             <Address
               area="Warrington"
               address="47 Old Liverpool Road"

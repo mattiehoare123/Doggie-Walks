@@ -17,12 +17,14 @@ height: 80px;
 export const services_and_cost = () => {
   return (
     <React.Fragment>
+      {/*Hero*/}
       <Hero title="Services & Cost" image={DogGroup}/>
       <Content>
         <p>
           Your dog shall receive the full-length time it deserves. Check for your local branch and pop in if you’re unsure which service is right for you. Every dog is unique,
           meaning that every dog deserves our full attention 7 days a week.
         </p>
+        {/*Dog Walking*/}
         <ServiceCost
           image={DogWalking}
           alt="Male with a blue hoody and jeans on walking his dog"
@@ -34,7 +36,7 @@ export const services_and_cost = () => {
           is best for your dog.
           "
           />
-
+        {/*House Calls*/}
         <ServiceCost
           image={HouseCalls}
           alt="Female with blue shirt on in a living room stroking a dog"
@@ -46,7 +48,7 @@ export const services_and_cost = () => {
           that your dog has the attention and care it deserves
           "
           />
-
+        {/*Day Care*/}
         <ServiceCost
           image={DayCare}
           alt="Female with a blue hoody and sunglasses on outside a dog care centre with a dog"
@@ -59,7 +61,6 @@ export const services_and_cost = () => {
           "
           />
           {/* <SpecialOfferSign src={SpecialOffer} alt="50% off house calls for new customer blue discount sign"/>*/}
-
       </Content>
     </React.Fragment>
   )

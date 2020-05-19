@@ -12,7 +12,7 @@ import styled from 'styled-components';
 const TeamGrid = styled.section`
 @media(${(props) => props.theme.responsive.ipad}) {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
 `
@@ -31,7 +31,9 @@ margin-bottom: ${(props) => props.theme.margin.bottom};
 export const meet_the_team = () => {
   return (
     <React.Fragment>
+      {/*Hero*/}
       <Hero title="Meet The Team" image={DogFace}/>
+      {/*Meet The Team*/}
       <Content>
         <TeamGrid>
           <MeetTheTeamHeading>Meet The Doggie Walks Team!</MeetTheTeamHeading>
@@ -46,6 +48,7 @@ export const meet_the_team = () => {
               well-respected canine trainers, behaviorists and practitioners.
             </p>
           </article>
+          {/*Employees Pictures properties passed to component*/}
           <PhotoCardsGrid>
             <PhotoCard
               image={Lori}

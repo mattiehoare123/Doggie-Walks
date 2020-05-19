@@ -17,17 +17,9 @@ margin-bottom: 2.5em;
 padding: .5em;
 `
 const Area = styled.li`
-font-size: 1.4rem;
 color: ${(props) => props.theme.colors.white};
 position: relative;
-
-@media(${(props) => props.theme.responsive.ipad}) {
-  font-size: 1.6rem;
-}
-
-@media(${(props) => props.theme.responsive.laptop}) {
-  font-size: 1.8rem;
-}
+font-size: clamp(1.5rem, 2vw, 1.8rem);
 
 &::after {
   content: '';
@@ -44,7 +36,7 @@ position: relative;
     background: url('${ DogBone }');
     background-size: 100% 100%;
     height: 20px;
-    width: 20px;
+    width: 30px;
     top: 0;
     left: 80px;
     border: none;

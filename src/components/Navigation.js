@@ -11,7 +11,7 @@ justify-content: space-between;
 align-content: center;
 
 @media (${(props) => props.theme.responsive.ipad}) {
-  max-width: 1200px;
+  width: min(100%, 1200px);
   display: grid;
   grid-template-columns: auto 700px auto;
   padding: 0 5em;
@@ -34,14 +34,7 @@ ul {
   justify-content: space-around;
 }
 li {
-  font-size: 2rem;
   font-weight: 500;
-  @media (${(props) => props.theme.responsive.ipad}) {
-    font-size: 1.4rem;
-  }
-  @media (${(props) => props.theme.responsive.laptop}) {
-    font-size: 1.7rem;
-  }
   .selected  {
     color: ${(props) => props.theme.colors.orange};
   }

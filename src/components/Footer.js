@@ -39,18 +39,13 @@ font-weight: ${(props) => props.theme.weights.semi};
 `
 const OpeningDayTimes = styled.ul`
 line-height: 1.3;
-font-size: 1.5rem;
 margin-top: .5em;
-
-@media(${(props) => props.theme.responsive.laptop}) {
-  font-size: 1.9rem;
-}
 `
 const CallUs = styled.p`
+font-size: 2.3rem;
 @media(${(props) => props.theme.responsive.laptop}) {
   grid-column: 3/4;
   text-align: right;
-  font-size: 2rem;
   margin-top: 0em;
 }
 grid-column: 1/-1;
@@ -58,7 +53,7 @@ color: ${(props) => props.theme.colors.orange};
 font-weight: ${(props) => props.theme.weights.semi};
 `
 const PhoneNumber = styled.a`
-font-size: 2.3rem;
+font-size: 2.5rem;
 color: ${(props) => props.theme.colors.orange};
 font-weight: ${(props) => props.theme.weights.semi};
 text-decoration: none;
