@@ -28,7 +28,7 @@ font-size: clamp(1.5rem, 2vw, 1.8rem);
   top: 3px;
   border-right: 1px solid white;
   height: 7px;
-  margin-left: 8px;
+  margin-left: 1.5vw;
 }
 
 @media(${(props) => props.theme.responsive.ipad}) {

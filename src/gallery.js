@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Helmet } from "react-helmet";
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
 import DogFace from './assets/Gallery/dog-face.jpg'
@@ -22,7 +23,7 @@ grid-gap: 15px;
 
 @media(${(props) => props.theme.responsive.laptop}) {
   grid-template-columns: 3fr repeat(4,1fr) 3fr;
-  grid-template-rows: 400px 300px 350px 350px;
+  grid-template-rows: 400px 300px 400px 400px;
 }
 `
 
@@ -52,7 +53,12 @@ height: 100%;
 export const gallery = () => {
   return (
     <React.Fragment>
+      {/*HTML Title*/}
+      <Helmet>
+          <title>Gallery</title>
+      </Helmet>
       <Hero title="Gallery" image={DogFace}/>
+      <Content>
         <GalleryImages>
           <DogImage src={BlondeHavanesse} alt="Blonde havanesse dog laying on grass"/>
           <DogImage src={DogWalkingMountain} alt="Female with blue hat on walking a dog in the mountains"/>
@@ -64,6 +70,7 @@ export const gallery = () => {
           <DogImage src={BlackLabrador} alt="Black labrador dog lying on grass" loading="lazy"/>
           <DogImage src={BrownLabrador} alt="Brown labrador dog lying on grass" loading="lazy"/>
         </GalleryImages>
+      </Content>
     </React.Fragment>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
-import { ContactLabel, styles, InputField, Message} from './theme/form'
+import { Helmet } from "react-helmet";
+import styled from 'styled-components'
+import { ContactLabel, Message} from './theme/form'
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
 import { Input } from './components/Input'
@@ -26,6 +27,11 @@ background: ${(props) => props.theme.colors.orange};
 color: ${(props) => props.theme.colors.white};
 text-transform: uppercase;
 font-weight: ${(props) => props.theme.weights.semi};
+&:hover {
+  border: 1px solid ${(props) => props.theme.colors.orange};
+  color: ${(props) => props.theme.colors.orange};
+  background: ${(props) => props.theme.colors.white};
+}
 `
 const StoreLocations = styled.section`
 margin: 2em 0;
@@ -35,8 +41,13 @@ grid-row-gap: 20px;
 `
 
 export const contact = () => {
+
   return (
     <React.Fragment>
+      {/*HTML Title*/}
+      <Helmet>
+          <title>Contact</title>
+      </Helmet>
       <Hero title="Contact" image={HeroDog}/>
       <Content>
         <p>
@@ -44,7 +55,8 @@ export const contact = () => {
           Feel free to pop in or fill out the form below.
         </p>
         <ContactGrid>
-          <ContactForm action="">
+          {/*Contact form that will send to client email*/}
+          <ContactForm name="contact" method="post">
             {/*Name*/}
             <Input
               name="name"
@@ -73,7 +85,7 @@ export const contact = () => {
               />
             {/*Message*/}
             <ContactLabel htmlFor="message">Message</ContactLabel>
-            <Message name="message" id="message" cols="30" rows="10"></Message>
+            <Message name="message" id="message" cols="30" rows="5"></Message>
             {/*Submit*/}
             <Submit>Submit</Submit>
           </ContactForm>

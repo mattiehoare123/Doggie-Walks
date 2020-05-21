@@ -1,5 +1,7 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
 import { Content } from './components/Content'
+import { NavLink } from "react-router-dom";
 import Dog from './assets/Home/dog-panting.jpg'
 import DogPaw from './assets/Home/dog-paw.jpg'
 import DogSitting from './assets/Home/dog-sitting.jpg'
@@ -11,22 +13,6 @@ import { Locations } from './components/Locations';
 import { flexColumn } from './theme/mixins.js'
 import { BackgroundCover } from './theme/mixins.js'
 
-
-const HomeHeadings = styled.h2`
-text-align: center;
-&::after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 60px;
-  margin: 1em auto;
-  background: ${(props) => props.theme.colors.blue};
-}
-&:nth-of-type(1) {
-  font-size: 2.5rem;
-  grid-column: 1/-1;
-}
-`
 
 const Hero = styled.section`
 //Mixin for display flex and column direction
@@ -59,6 +45,11 @@ padding: .4em;
 font-size: 1.5rem;
 border-radius: .1em;
 margin-top: .5em;
+transition: all;
+transition-duration: 1s;
+&:hover {
+  transform: scale(1.2);
+}
 `
 
 const PhoneNumber = styled.a`
@@ -67,6 +58,25 @@ font-weight: ${(props) => props.theme.weights.bold};
 text-transform: uppercase;
 padding: .2em;
 font-size: clamp(1.5rem, 3vw, 2rem);
+`
+
+const HomeHeadings = styled.h2`
+text-align: center;
+&::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 60px;
+  margin: .6em auto;
+  background: ${(props) => props.theme.colors.blue};
+}
+&::before {
+  content: '';
+  height: 0px;
+  width: 0px;
+}
+font-size: clamp(2.3rem, 3vw, 3rem);
+grid-column: 1/-1;
 
 `
 
@@ -77,6 +87,10 @@ const TextRight = styled.p`
   align-items: center;
   grid-gap: 1em;
 }
+
+p {
+  line-height: 2;
+}
 `
 const HumanHoldingPaw = styled.img`
 display: block;
@@ -85,8 +99,8 @@ width: 245px;
 height: 237px;
 margin-bottom: 1em;
 @media(${(props) => props.theme.responsive.ipad}) {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
 }
 `
 const Services = styled.article`
@@ -107,6 +121,10 @@ grid-column: 1/-1;
 export const home = () => {
   return (
     <React.Fragment>
+      <Helmet>
+          {/*Declare the title of the page*/}
+          <title>Home</title>
+      </Helmet>
       <Hero>
         <div>
           <DogWalkingTitle>Do You Need<br/> Your Dog Walking?</DogWalkingTitle>
@@ -130,13 +148,15 @@ export const home = () => {
           </p>
           <TextRight>
             <HumanHoldingPaw src={DogPaw} alt="A blonde female holding a dogs paw by a lake"/>
+          <p>
             We recognise every dog's needs are different and how busy daily life can be.
-            With services starting from only £10 we ensure you the best possible service
+            With services starting from only <span>£10</span> we ensure you the best possible service
             to suit the needs of both you and your pooch.
+          </p>
           </TextRight>
           <p>
             We are also fully insured for everybody's peace of mind, for more information on this please
-            contact us or email at <a href="">info@doggiewalks.co.uk</a>
+            contact us or email at <a href="mailto:info@doggiewalks.co.uk">info@doggiewalks.co.uk</a>
           </p>
         </article>
         <Services>
@@ -159,7 +179,7 @@ export const home = () => {
                   />
           <ServiceText>
             There's something to suit everyone but if you can't find what you're
-            looking for don't hesitate to <span>contact us</span> and we'll find the perfect solution
+            looking for don't hesitate to <NavLink to="contact">contact us</NavLink> and we'll find the perfect solution
             for you and your companion!
           </ServiceText>
         </Services>

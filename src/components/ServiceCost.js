@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
+import { NavLink } from "react-router-dom";
+
 
 const Service = styled.section`
 // To display the special off sign inline with the title
@@ -35,6 +37,10 @@ margin-right: 1.4em;
 const Time = styled.p`
 display: inline-block;
 font-size: 1.5rem;
+
+a {
+  font-size: inherit;
+}
 `
 
 export const ServiceCost = ({image, alt, service, cost, time, description}) => {
@@ -44,7 +50,7 @@ export const ServiceCost = ({image, alt, service, cost, time, description}) => {
       <div>
         <h2>{service}</h2>
         <Cost>£{cost}/DAY</Cost>
-        <Time>Duration: {time} (enquire for more)</Time>
+        <Time>Duration: {time} (enquire <NavLink to="contact">here</NavLink> for more)</Time>
         <p>
           {description}
         </p>

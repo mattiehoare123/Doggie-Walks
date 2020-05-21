@@ -13,6 +13,10 @@ margin-bottom: .7em;
 `
 const ServiceTitle = styled.p`
 font-weight: ${(props) => props.theme.weights.bold};
+//Reset margin 
+&:first-of-type {
+  margin: 0;
+}
 `
 
 const Pupply = styled.p`

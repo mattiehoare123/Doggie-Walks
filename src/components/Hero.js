@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Locations } from '../components/Locations';
-import { BackgroundCover } from '../theme/mixins.js'
-
+import { BackgroundCover } from '../theme/mixins.js';
 
 const StyledHero = styled.section`
 width: 100%;
@@ -41,6 +40,7 @@ color: ${(props) => props.theme.colors.white};
 font-weight: ${(props) => props.theme.weights.bold};
 z-index: 1;
 `
+
 
 export const Hero = (props) => {
 

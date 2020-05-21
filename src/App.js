@@ -28,7 +28,7 @@ function App(props) {
         </BrowserRouter>
         {/*Foooter*/}
         <Footer/>
-      </React.Fragment>
+    </React.Fragment>
   );
 }
 

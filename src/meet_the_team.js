@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
 import { Hero } from './components/Hero'
 import { PhotoCard } from './components/PhotoCard'
 import { Content } from './components/Content'
@@ -31,6 +32,10 @@ margin-bottom: ${(props) => props.theme.margin.bottom};
 export const meet_the_team = () => {
   return (
     <React.Fragment>
+      {/*HTML Title*/}
+      <Helmet>
+          <title>Meet The Team</title>
+      </Helmet>
       {/*Hero*/}
       <Hero title="Meet The Team" image={DogFace}/>
       {/*Meet The Team*/}

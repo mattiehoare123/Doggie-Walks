@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Helmet } from "react-helmet";
 import { Hero } from './components/Hero'
 import { Content } from './components/Content'
 import DogGroup from './assets/Services/dogs-group.jpg'
@@ -12,11 +13,20 @@ import { ServiceCost } from './components/ServiceCost'
 const SpecialOfferSign = styled.img`
 width: 100px;
 height: 80px;
+transform: translateY(5vh);
+
+@media(${(props) => props.theme.responsive.ipad}) {
+  transform: translateY(11vh);
+}
 `
 
 export const services_and_cost = () => {
   return (
     <React.Fragment>
+      {/*HTML Title*/}
+      <Helmet>
+          <title>Services & Cost</title>
+      </Helmet>
       {/*Hero*/}
       <Hero title="Services & Cost" image={DogGroup}/>
       <Content>
@@ -37,6 +47,7 @@ export const services_and_cost = () => {
           "
           />
         {/*House Calls*/}
+        <SpecialOfferSign src={SpecialOffer} alt="50% off house calls for new customer blue discount sign"/>
         <ServiceCost
           image={HouseCalls}
           alt="Female with blue shirt on in a living room stroking a dog"
@@ -60,7 +71,6 @@ export const services_and_cost = () => {
           your dog is safe, protected and healthy. This will cover all services from feeding, bathing walking and sleeping.
           "
           />
-          {/* <SpecialOfferSign src={SpecialOffer} alt="50% off house calls for new customer blue discount sign"/>*/}
       </Content>
     </React.Fragment>
   )

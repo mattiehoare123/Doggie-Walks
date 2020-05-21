@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import Paw from '../assets/dog-paw.svg'
+import DogPaw from '../assets/dog-paws.svg'
+
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
@@ -17,6 +19,14 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-image: url(${DogPaw});
+  background-size: 200%;
+
+
+  @media(${(props) => props.theme.responsive.ipad}) {
+    padding: 0 5em inherit;
+    background-size: 90%;
+  }
 }
 
 li {
@@ -59,6 +69,10 @@ p {
 
 a {
   text-decoration: none;
+}
+
+a, button {
+  pointer: cursor;
 }
 
 /*Highlight important text in paragraphs*/

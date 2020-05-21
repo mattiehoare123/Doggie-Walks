@@ -9,11 +9,12 @@ padding: 0 2em;
 margin: 0 auto;
 justify-content: space-between;
 align-content: center;
+background-color: ${(props) => props.theme.colors.white};
 
 @media (${(props) => props.theme.responsive.ipad}) {
-  width: min(100%, 1200px);
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: auto 700px auto;
+  grid-template-columns: auto 55vw auto;
   padding: 0 5em;
 }
 `
@@ -83,7 +84,7 @@ export const Navigation = () => {
       <NavBar>
         <ul>
           <li><StyledLink to="home" activeClassName="selected">Home</StyledLink></li>
-          <li><StyledLink to="about_us" activeClassName="selected">About</StyledLink></li>
+          <li><StyledLink to="about_us" activeClassName="selected">About Us</StyledLink></li>
           <li><StyledLink to="services_and_cost" activeClassName="selected">Services & Cost</StyledLink></li>
           <li><StyledLink to="gallery" activeClassName="selected">Gallery</StyledLink></li>
           <li><StyledLink to="contact" activeClassName="selected">Contact</StyledLink></li>
