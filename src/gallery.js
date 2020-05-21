@@ -59,6 +59,10 @@ export const gallery = () => {
       </Helmet>
       <Hero title="Gallery" image={DogFace}/>
       <Content>
+        <p>
+          Every week is a busy week! Checkout how much fun our guests have within our day care centers. All photos
+          have been taken with the consent of every owner
+        </p>
         <GalleryImages>
           <DogImage src={BlondeHavanesse} alt="Blonde havanesse dog laying on grass"/>
           <DogImage src={DogWalkingMountain} alt="Female with blue hat on walking a dog in the mountains"/>
